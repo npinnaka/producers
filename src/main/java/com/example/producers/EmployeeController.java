@@ -57,4 +57,10 @@ public class EmployeeController {
         tmp.setEmpId(emp.getEmpId());
         return tmp;
     }
+
+    @DeleteMapping(value = "/employees")
+    public Holder cleanup() {
+        holder.setEmployees(new ArrayList<>());
+        return holder;
+    }
 }
